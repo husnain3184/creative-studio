@@ -1,0 +1,19 @@
+{{ $number  := 0 }}
+{{ range .angels }}
+<tr>
+    {{ $number = increment $number 1 }}
+    <td>{{ $number }}</td>
+    <td>{{ .Designation }}</td>
+    <td>{{ .Name }}</td>
+    <td>{{ .Detail }}</td>
+    <td>{{ .Facebook }}</td>
+    <td>{{ .Github }}</td>
+    <td>{{ .Dropbox }}</td>
+    <td>{{ .Twitter }}</td>
+    <td><img src="../../static/uploads/{{ .Image }}"/></td>
+    <td>
+        <button data-id="{{ .Id }}" class="btn btn-danger btn-sm delete-student">Delete</button>
+        <button data-id="{{ .Id }}" class="btn btn-warning btn-sm edit-student">Edit</button>
+    </td>
+</tr>
+{{ end }}
