@@ -1,0 +1,14 @@
+{{ $number  := 0 }}
+{{ range .blogs }}
+<tr>
+    {{ $number = increment $number 1 }}
+    <td>{{ $number }}</td>
+    <td>{{ .Title }}</td>
+    <td>{{ .Detail }}</td>
+    <td><img src="../../static/uploads/{{ .Image }}" alt="{{ .Title }}"/></td>
+    <td>
+        <button data-id="{{ .Id }}" class="btn btn-danger btn-sm delete-student">Delete</button>
+        <button data-id="{{ .Id }}" class="btn btn-warning btn-sm edit-student">Edit</button>
+    </td>
+</tr>
+{{ end }}

@@ -1,0 +1,17 @@
+{{ $number  := 0 }}
+{{ range .portfolio }}
+   
+    {{ $number = increment $number 1 }}
+                <div class="col-sm-4">
+                    <div class="img-wrapper">
+                        <img src="../static/uploads/{{ .Image }}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <h5>{{ .Title }}</h5>
+                                <a href="{{ .Url }}"><i class="ti-link"></i></a>
+                            </div>  
+                        </div>
+                    </div>                 
+                </div>
+   
+{{ end }}

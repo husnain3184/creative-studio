@@ -72,7 +72,7 @@ func (m *AngelsModel) Create(angels *entities.Angels) error {
 
 func (m *AngelsModel) Update(angels entities.Angels) error {
 
-	_, err := m.db.Exec("update angels set designation = ?, name = ?, detail = ?, facebook = ?, github = ? , dropbox = ? , Twitter = ? , image = ? where id = ?", angels.Designation, angels.Name, angels.Detail, angels.Facebook, angels.Github, angels.Dropbox, angels.Twitter, angels.Image)
+	_, err := m.db.Exec("update angels set designation = ?, name = ?, detail = ?, facebook = ?, github = ? , dropbox = ? , Twitter = ? , image = ? where id = ?", angels.Designation, angels.Name, angels.Detail, angels.Facebook, angels.Github, angels.Dropbox, angels.Twitter, angels.Image, angels.Id)
 
 	if err != nil {
 		return err

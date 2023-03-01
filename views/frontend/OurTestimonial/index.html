@@ -1,0 +1,16 @@
+{{ $number  := 0 }}
+{{ range .testimonial }}
+   
+    {{ $number = increment $number 1 }}
+              <div class="col-md-6">
+                    <div class="testimonial-wrapper">
+                        <div class="img-holder">
+                            <img src="../static/uploads/{{ .Image }}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">                     
+                        </div>
+                        <div class="body">
+                            <p class="subtitle">{{ .Details }}</p>
+                            <h6 class="title">{{ .Name }}</h6>
+                        </div>
+                    </div>
+                </div>
+{{ end }}

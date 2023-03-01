@@ -11128,12 +11128,14 @@ p {
   margin-bottom: 30px;
   display: block;
   display: block;
+  height: 349px;
 }
 
 .img-wrapper img {
   position: relative;
   width: 100%;
   z-index: 8;
+  height: 100%;
 }
 
 .img-wrapper .overlay {

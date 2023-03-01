@@ -1,0 +1,21 @@
+{{ $number  := 0 }}
+{{ range .angels }}
+   
+    {{ $number = increment $number 1 }}
+                <div class="col-sm-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="../static/uploads/{{.Image}}">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">{{ .Designation }}</h6>
+                            <h5 class="card-title">{{ .Name }}</h5>
+                            <p>{{ .Detail }}</p>
+                            <div class="socials">
+                                <a href="{{.Facebook}}"><i class="ti-facebook"></i> </a>
+                                <a href="{{.Github}}"><i class="ti-github"></i></a>
+                                <a href="{{.Dropbox}}"><i class="ti-dropbox"></i></a>
+                                <a href="{{.Twitter}}"><i class="ti-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{{ end }}

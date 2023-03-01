@@ -1,0 +1,19 @@
+{{ $number  := 0 }}
+{{ range .blogs }}
+   
+    {{ $number = increment $number 1 }}
+               <div class="col-md-4">
+                    <div class="card blog-post my-4 my-sm-5 my-md-0">
+                        <img src="../static/uploads/{{ .Image }}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page">
+                        <div class="card-body">
+                            <div class="details mb-3">
+                                <a href="javascript:void(0)"><i class="ti-comments"></i> 164</a>
+                                <a href="javascript:void(0)"><i class="ti-eye"></i> 425</a>
+                            </div>
+                            <h5 class="card-title">{{ .Title }}</h5>
+                            <p>{{ .Detail }}</p>
+                            <a href="javascript:void(0)" class="d-block mt-3">Read More...</a>
+                        </div>
+                    </div>
+                </div>  
+{{ end }}

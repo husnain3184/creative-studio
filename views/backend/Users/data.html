@@ -1,0 +1,15 @@
+{{ $number  := 0 }}
+{{ range .users }}
+<tr>
+    {{ $number = increment $number 1 }}
+    <td>{{ $number }}</td>
+    <td>{{ .Name }}</td>
+    <td>{{ .Username }}</td>
+    <td>{{ .Email }}</td>
+    <td>{{ .Roll }}</td>
+    <td>
+        <button data-id="{{ .Id }}" class="btn btn-danger btn-sm delete-student">Delete</button>
+        <button data-id="{{ .Id }}" class="btn btn-warning btn-sm edit-student">Edit</button>
+    </td>
+</tr>
+{{ end }}

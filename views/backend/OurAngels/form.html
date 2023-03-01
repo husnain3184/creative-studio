@@ -8,15 +8,15 @@
         <div class="modal-body">
             <div class="form-group">
                <label for="">Designation</label>
-               <input id="designation" type="text" name="designation" value="{{ .angels.designation }}" class="form-control">
+               <input id="designation" type="text" name="designation" value="{{ .angels.Designation }}" class="form-control">
             </div>
              <div class="form-group">
                 <label for="">Name</label>
-                <input id="name" type="text" name="name" value="{{ .angels.name  }}" class="form-control">
+                <input id="name" type="text" name="name" value="{{ .angels.Name  }}" class="form-control">
              </div>
              <div class="form-group">
                 <label for="">detail</label>
-                <input id="detail" type="text" name="detail" value="{{ .angels.detail  }}" class="form-control">
+                <input id="detail" type="text" name="detail" value="{{ .angels.Detail  }}" class="form-control">
              </div>
              <div class="form-group">
                 <label for="">Facebook</label>
@@ -24,25 +24,25 @@
              </div>
              <div class="form-group">
                 <label for="">github</label>
-                <input type="text" id="github" name="github" value="{{ .angels.github  }}" class="form-control">
+                <input type="text" id="github" name="github" value="{{ .angels.Github  }}" class="form-control">
              </div>
              <div class="form-group">
                 <label for="">dropbox</label>
-                <input type="text" id="dropbox" name="dropbox"  value="{{ .angels.dropbox }}" class="form-control">
+                <input type="text" id="dropbox" name="dropbox"  value="{{ .angels.Dropbox }}" class="form-control">
              </div>
              <div class="form-group">
                 <label for="">twitter</label>
-                <input type="text" id="twitter" name="twitter"  value="{{ .angels.twitter }}" class="form-control">
+                <input type="text" id="twitter" name="twitter"  value="{{ .angels.Twitter }}" class="form-control">
              </div>
              <div class="form-group">
                 <label for="">Image</label>
-                <input id="file" type="file" name="image"  value="{{ .angels.Image }}" class="form-control">
+                <input id="file" type="file" name="image"  value="" class="form-control">
+                  <img src="../../../static/uploads/{{ .angels.Image }}" width="100" height="100"   alt=""> 
              </div> 
-             
           </div>
           <div class="modal-footer">
             {{ if .angels.Id }}
-            <input type="hidden" name="id" value="{{ .angels.Id }}">
+            <input type="hidden" name="id"  id="id" value="{{ .angels.Id }}">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary">Change Data</button>
             {{else}}

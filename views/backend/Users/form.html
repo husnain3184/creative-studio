@@ -1,0 +1,48 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">{{ .title }}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="form-users" action="/manage-users/store" method="post" enctype="multipart/form-data">
+        <div class="modal-body">
+           
+             <div class="form-group">
+                <label for="">Name</label>
+                <input id="name" type="text" name="name" value="{{ .users.Name  }}" class="form-control">
+             </div>
+             <div class="form-group">
+                <label for="">User Name</label>
+                <input id="Username" type="text" name="Username" value="{{ .users.Username  }}" class="form-control">
+             </div>
+             <div class="form-group">
+                <label for="">Email</label>
+                <input id="email" type="text" name="email" value="{{ .users.Email  }}" class="form-control">
+             </div>
+             <div class="form-group">
+                <label for="">Password</label>
+                <input id="password" type="Password" name="password" value="{{ .users.Password  }}" class="form-control">
+             </div>
+             <div class="form-group">
+                <label for="">Roll</label>
+                <select name="roll" id="roll" class="form-control" >
+                  <option value="Admin">Admin</option>
+                  <option value="author">Author</option>
+               </select>
+             </div>
+             
+             
+          </div>
+          <div class="modal-footer">
+            {{ if .users.Id }}
+            <input type="hidden" name="id" value="{{ .users.Id }}">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Change Data</button>
+            {{else}}
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save Data</button>
+            {{end}}
+          </div>
+      </form>
+    </div>
+  </div>

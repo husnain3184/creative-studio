@@ -1,0 +1,14 @@
+{{ $number  := 0 }}
+{{ range .service }}
+   
+    {{ $number = increment $number 1 }}
+            <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-filter text-primary"></i></h2>
+                            <h6 class="card-title">{{ .Title }}</h6>
+                            <p>{{ .Detail }}</p>
+                        </div>
+                    </div>
+                </div>
+{{ end }}

@@ -25,7 +25,7 @@ func AdminLogin(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == http.MethodGet {
 
-		temp, _ := template.ParseFiles("views/backend/adminlogin.html")
+		temp, _ := template.ParseFiles("views/backend/Login/adminlogin.html")
 		temp.Execute(w, nil)
 
 	} else if r.Method == http.MethodPost {
@@ -103,7 +103,7 @@ func Dashboard(w http.ResponseWriter, r *http.Request) {
 				"name": session.Values["name"],
 			}
 
-			temp, _ := template.ParseFiles("views/backend/dashboard.html", "views/backend/dashboardlayout.html")
+			temp, _ := template.ParseFiles("views/backend/Dashboard/dashboard.html", "views/backend/Dashboard/dashboardlayout.html")
 			temp.Execute(w, data)
 
 		}
